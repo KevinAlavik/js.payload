@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input type="text" id="payload" placeholder="JS Payload">
+    <button onclick="load()">Trigger</button>
+    <script>
+      let payload = document.getElementById('payload');
+
+      function load() {
+          let scriptElement = document.createElement('script');
+          scriptElement.innerHTML = payload.value;
+          document.body.appendChild(scriptElement);
+      }
+    </script>
+</body>
+</html>
